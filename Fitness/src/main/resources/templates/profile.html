@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../static/css/profile.css" th:href="@{/css/profile.css}"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fitness - Learn... </title>
+    <script src="../static/js/jquery.js" th:src="@{/js/jquery.js}"></script>
+    <script src="../static/js/jquery.easing.min.js" th:src="@{/js/jquery.easing.min.js}"></script>
+    <script type="text/javascript" src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <title>Dashboard</title>
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="register.html" th:href="@{/register}">HOME</a></li>
+            <li><a href="enroll.html" th:href="@{/enroll}">Enroll to package</a></li>
+            <li><a href="add.html" th:href="@{/add}">Add workout</a></li>
+            <li><a href="load.html" th:href="@{/load}">Check workout</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+<main>
+    <article>
+        <p>
+        <h2>Welcome, <span
+                th:text="${collatedUser.getFitnessUser().firstName}+' '+${collatedUser.getFitnessUser().lastName}">#</span>
+        </h2>
+        You're on a great path towards a better future. Don't give up and stay consistent.
+        <br><h3> Here are some tips..</h3>
+        Regular exercise is one of the best things you can do for your health. It has many benefits, including improving
+        your overall health and fitness, and reducing your risk for many chronic diseases. There are many different
+        types of exercise; it is important that you pick the right types for you. Most people benefit from a combination
+        of them:</p>
+        <ol>
+            <li>Endurance, or aerobic, activities increase your breathing and heart rate. They keep your heart, lungs,
+                and circulatory system healthy and improve your overall fitness. Examples include brisk walking,
+                jogging, swimming, and biking.</li>
+            <li>Strength, or resistance training, exercises make your muscles stronger. Some examples are lifting
+                weights and using a resistance band.</li>
+            <li>Balance exercises can make it easier to walk on uneven surfaces and help prevent falls. To improve your
+                balance, try tai chi or exercises like standing on one leg.</li>
+            <li>Flexibility exercises stretch your muscles and can help your body stay limber. Yoga and doing various
+                stretches can make you more flexible.</li>
+        </ol>
+
+
+        <h2>You are enrolled to Program(s):</h2>
+        <table>
+            <tr th:each="enroll : ${collatedUser.enrolls}">
+                <td id='currentLevel' th:text="${enroll.user}">Carmen</td>
+            </tr>
+        </table>
+        <h3>Click on the button below to load AJAX information regarding exercises</h3>
+        <p>Hosted on: https://api.myjson.com/bins/1f0syy.json</p>
+<!--
+        Backup, if service is down https://api.jsonbin.io/b/5ca2ebcec980796377d6b9f6
+-->
+         <button onclick="clickButton()">Load</button>
+        <div id="fitness-info"></div>
+    </article>
+    <aside>
+        <h1>Login history</h1>
+        <tr th:each="login : ${collatedUser.logins}">
+            <td th:text="${login.time}">1st March 2019</td>
+    </aside>
+
+    <section>
+
+     </section>
+    <footer id='footer'>
+        Your personal dashboard to check your packages.
+    </footer>
+</main>
+</body>
+</html>
+
+
+
+
+
+

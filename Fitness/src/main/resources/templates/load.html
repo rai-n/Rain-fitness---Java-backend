@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../static/css/profile.css" th:href="@{/css/profile.css}"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fitness - Learn... </title>
+    <script src="../static/js/jquery.js" th:src="@{/js/jquery.js}"></script>
+    <script src="../static/js/jquery.easing.min.js" th:src="@{/js/jquery.easing.min.js}"></script>
+    <script type="text/javascript" src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <title>Statistics view</title>
+</head>
+<header>
+
+    <nav class="nav-collapse">
+        <ul>
+            <li><a href="register.html" th:href="@{/register}">HOME</a></li>
+            <li><a href="#" th:href="@{/profile}">Back To Profile</a></li>
+            <li><a href="add.html" th:href="@{/add}">Append Workout</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+<main>
+    <section>
+        <h1>Navigate to Append Workout</h1>
+        <p>For each of your workouts sessions, write down what workout your did,
+            how many reps/ sets and how long you did it for.</p>
+        <h1>Exercise counter</h1>
+        <h3>HINT! Click on the exercise to load total repetitions!</h3>
+        <div id='colourbox'>
+            <table id="tbl">
+                <tr>
+                    <th onclick="sortTable()">Exercise</th>
+                    <th onclick="sortTable()">Minutes</th>
+                    <th onclick="sortTable()">Sets</th>
+                    <th onclick="sortTable()">Reps</th>
+                </tr>
+                <tr th:each="exercise:${exercises}">
+                    <td><a href="index.html" th:href="@{/statcount(workout=${exercise.workout})}" name="workout"
+                           th:text="${exercise.workout}">#</a></td>
+                    <td th:text="${exercise.mins}">#</td>
+                    <td th:text="${exercise.sets}">#</td>
+                    <td th:text="${exercise.reps}">#</td>
+                </tr>
+            </table>
+            <button onclick="findSum()">Calculate total hours worked out!</button>
+        </div>
+
+
+        <div id='colourbox'>
+        <p>All together, you have spent <span id="mins">N</span> minutes in total this session!</p>
+        </div>
+    </section>
+    <article>
+        <h2>Did you know?</h2>
+        The optimal exercise session lasts about an hour. Overworking does exist!<br>
+        Get plenty of rest.
+    </article>
+
+    <footer id='footer'>
+        See the overall statistics of your fitness sessions
+    </footer>
+</main>
+</body>
+</html>
+
+
+
+
+
+

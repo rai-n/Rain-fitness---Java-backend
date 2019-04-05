@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fitness</title>
+    <script src="../static/js/jquery.js" th:src="@{/js/jquery.js}"></script>
+    <script src="../static/js/jquery.easing.min.js" th:src="@{/js/jquery.easing.min.js}"></script>
+    <script type="text/javascript" src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <title>Health and fitness</title>
+
+</head>
+
+<header>
+    <nav class="nav-collapse">
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Packages">Packages</a></li>
+            <li><a href="#Diet">Diet</a></li>
+            <li><a href="#Register">Register</a></li>
+            <li><a href="#" th:href="@{/profile}">Profile</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<main>
+
+    <!--Main screen-->
+    <div id="Home"></div>
+    <div id='colourbox'>
+        <div class='cta container'>
+            <img alt='Splash' class='splash' src='../static/images/fitness/neerfit.png'
+                 th:src="@{/images/fitness/neerfit.png}">
+            <h1>Start your journey today</h1>
+            <p>We will guide you to your ideal self</p>
+            <a class='button' href='#Register'>
+                <span>Register</span>
+            </a>
+            <p><br> <br> <br> <br> <br></p>
+        </div>
+
+    </div>
+
+    <!-- Breaker-->
+    <div id="parallax1"></div>
+    <!-- Packages-->
+    <div id="Packages"></div>
+    <div class="section group">
+        <div class="col span_1_of_2">
+            <div id='packages'>
+                <div class='container'>
+                    <h3><a>Targeted exercise</a></h3>
+                </div>
+                <ul>
+
+                    <li>
+                        <div>
+                            <h4>Chest</h4>
+                        </div>
+
+                        <a href="#"> <img alt='Chest' src='../static/images/fitness/chest.png'
+                                          th:src="@{/images/fitness/chest.png}"></a>
+                    </li>
+                    <li>
+                        <div>
+                            <h4>Biceps</h4>
+                        </div>
+                        <a href="#"> <img alt='Biceps' src='../static/images/fitness/bicep.png'
+                                          th:src="@{/images/fitness/bicep.png}"></a>
+                    </li>
+
+                    <li>
+                        <div>
+                            <h4>Back</h4>
+                        </div>
+                        <a href="#"> <img alt='Back' src='../static/images/fitness/back.png'
+                                          th:src="@{/images/fitness/back.png}"></a>
+                    </li>
+
+                    <li>
+                        <div>
+                            <h4>Legs</h4>
+                        </div>
+                        <a href="#"> <img alt='Legs' src='../static/images/fitness/Legs.png'
+                                          th:src="@{/images/fitness/Legs.png}"></a>
+                    </li>
+
+
+                    <div class="cta container">
+                        <div id="textboxw intro">
+                            <br>
+                            <p><a>You can target muscle growth and improve your muscle definition with weights and body
+                                weight exercises, focusing on specific areas. <br>
+                                Targeting specific muscles without stressing any others.<br>
+                                Helping with injury recovery because you can target one muscle without getting the
+                                injured ones involved.<br>
+                                Strengthening an area you feel is weaker than the rest of your body.
+                            </a>
+                            </p>
+                            <span><a href="#" th:href="@{/fitness}" class="btn btn-info" role="button">Learn more</a>
+                            </span>
+
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+
+        <div class="col span_1_of_2">
+            <div id='packages'>
+                <div class='container'>
+                    <h3><a> You can sign up to different packages depending on your current fitness level.
+                        <br>It is recommended that you remain consistent in the program.</a></h3>
+                </div>
+                <ul>
+
+                    <li>
+                        <div>
+                            <h4>Beginner</h4>
+                        </div>
+
+                        <a href="#"> <img alt='Beginner' src='../static/images/fitness/beginner.jpg'
+                                          th:src="@{/images/fitness/beginner.jpg}"></a>
+                    </li>
+
+                    <li>
+                        <div>
+                            <h4>Intermediate</h4>
+                        </div>
+
+                        <a href="#"> <img alt='Beginner' src='../static/images/fitness/intermediate.jpg'
+                                          th:src="@{/images/fitness/intermediate.jpg}"></a>
+                    </li>
+
+                    <li>
+                        <div>
+                            <h4>Expert</h4>
+                        </div>
+                        <a href="#"> <img alt='Expert' src='../static/images/fitness/expert.jpg'
+                                          th:src="@{/images/fitness/expert.jpg}"></a>
+                    </li>
+
+            </div>
+
+            <div class="cta container">
+                <div id="textboxw intro">
+                    <p id='p-wh'>The optimal number of hours you should workout may vary person to person with varying
+                        levels of
+                        intensity.
+                        <br>American College of Sports Medicine suggests you should exercise for 150 to 250 minutes per
+                        week to lose weight.
+                        <br>Therefore, personalise your routine and see what is best for you.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breaker-->
+    <div id="parallax2"></div>
+    <!-- Diet-->
+    <div id="Diet">
+        <p><br><br></p>
+    </div>
+    <div id="food-bg">
+        <div class="section group">
+            <div class="col span_1_of_2">
+                <div class="section group">
+
+                    <div class="col span_1_of_2">
+                        <div class="card-profile">
+                            <img class="card-user-profile-img" src="/static/images/fitness/food.jpg"
+                                 th:src="@{/images/fitness/food.jpg}" alt="Food"/>
+                            <div class="card-content card-section">
+                                <div class="card-picture">
+                                    <img src="/static/images/fitness/health.png" th:src="@{/images/fitness/health.png}"
+                                         alt="Food2"/>
+                                </div>
+                                <p class="card-user-profile-name">More of this</p>
+                                <p class="card-user-profile-status">General rule of thumb to follow</p>
+                                <p class="card-user-profile-info">
+                                    Base your meals on starchy carbohydrates.<br>
+                                    Eat lots of fruit and veg.<br>
+                                    Eat more fish – including a portion of oily fish.<br>
+                                    Cut down on saturated fat and sugar.<br>
+                                    Eat less salt – no more than 6g a day for adults.<br>
+                                    Get active and be a healthy weight.<br>
+                                    Don't get thirsty.<br>
+                                    Don't skip breakfast.<br>
+                                </p>
+                            </div>
+
+                            <div class="card-action">
+                                <a href="#" class="card-user-profile-button button hollow">Follow</a>
+                                <a href="#" class="card-user-profile-button button hollow secondary">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col span_1_of_2">
+                        <div class="card-profile">
+                            <img class="card-user-profile-img" src="/static/images/fitness/unhealthy.png"
+                                 th:src="@{/images/fitness/unhealthy.png}"
+                                 alt="Food"/>
+                            <div class="card-content card-section">
+                                <div class="card-picture">
+                                    <img src="/static/images/fitness/food2.jpg" th:src="@{/images/fitness/food2.jpg}"
+                                         alt="Food2"/>
+                                </div>
+                                <p class="card-user-profile-name">Less of this</p>
+                                <p class="card-user-profile-status">Try to avoid these foods most of the time</p>
+                                <p class="card-user-profile-info">
+                                    French fries and potato chips<br>
+                                    Fizzy drinks<br>
+                                    White bread<br>
+                                    Most fruit juices<br>
+                                    Ice cream<br>
+                                    Pastries, Cookies and Cakes<br>
+                                    Pizza <br>
+                                </p>
+                            </div>
+
+                            <div class="card-action">
+                                <a href="#" class="card-user-profile-button button hollow">Follow</a>
+                                <a href="#" class="card-user-profile-button button hollow secondary">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col span_1_of_2">
+                <div class="section group">
+                    <div class="col span_1_of_2">
+                        <div class="card-profile">
+                            <div id='test'>
+                                <label>Male:
+                                    <input id="male" type="radio" name="gender" onchange="calsPerDay()" checked>
+                                </label>
+                                <label>Female:
+                                    <input id="female" type="radio" name="gender" onchange="calsPerDay()">
+                                </label>
+                                <label>Age:
+                                    <input id="age" type="number" minlength = "1" maxlength="200" oninput="calsPerDay()" value="28" >
+                                    years
+                                </label>
+                                <label>Height:
+                                    <input id="height" type="number" minlength="1.0" maxlength="2.8" oninput="calsPerDay()" value="1.7" >
+                                    (Meters)
+                                </label>
+                                <label>Weight:
+                                    <input id="weight" type="number" minlength="40" maxlength="300" oninput="calsPerDay()" value="80" >
+                                    (Kg)
+                                </label>
+                                <label>
+                                    Rate: <span id="totalCals">x</span> KCal per day
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col span_1_of_2">
+                        <div class="card-profile">
+                            <div id="test0">
+                                <h3>Calculate your Basal Metabolic Rate</h3>
+                                <p class="card-user-profile-info">Basal Metabolic Rate is the number of calories
+                                    required to keep your body functioning
+                                    at rest.
+                                    <br></p>
+
+                                <p class="card-user-profile-info">
+                                    A caloric deficit is any shortage in the amount of calories consumed relative to the
+                                    amount of calories required for maintenance of current body weight (energy
+                                    homeostasis).
+                                    <br><br>A deficit can be created by reducing input/calories consumed.
+                                    <br><br>Increased output is also created by increasing physical activity.
+                                    <br><br>A calorie deficit of 500-1000 calories per day should result in a 1-2 pound
+                                    weight
+                                    loss per week. <br>
+                                    <br>This can be achieved by a healthy workout scheme and a consistent diet plan.
+
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cta container">
+            <div id="textboxw intro">
+                <a href="#" th:href="@{/diet}" class="btn btn-info" role="button">Learn more about Calorie counting</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breaker-->
+    <div id="parallax3"></div>
+    <div id="Register">
+
+        <p><br><br></p></div>
+    <div id="register-bg">
+        <div class="section group">
+
+
+            <div class="col span_1_of_2">
+                <div id='test'>
+                    <h2><em>Here is why you should register</em></h2>
+                    <p>Without a membership, you have access to the calorie counter and an assortment of information.
+                        However, with a membership, you will also have access to:</p>
+                    <ol>
+                        <li>Have access to a tracking system for your fitness.</li>
+                        <li>Have access to check how many time you spent on specific workouts.</li>
+                    </ol>
+                    <h3>Additionally:</h3>
+                    <ul>
+                        <li>You will live a healthier life</li>
+                        <li>You will live a more successful life</li>
+                        <li>You will improve your mind</li>
+                        <li>Your future self will thank you</li>
+                    </ul>
+                    <h3></h3>
+
+
+                    <p><br></p>
+                </div>
+            </div>
+            <div class="col span_1_of_2">
+                <form th:action="@{register}" method="post" th:object="${fitnessUser}">
+
+                    <fieldset>
+                        <legend>Sign up</legend>
+                        <table>
+                            <tr>
+                                <td><label for="title">Title:</label></td>
+                                <td>
+                                    <select id="title" th:field="*{title}">
+                                        <option value="Mr">Mr</option>
+                                        <option value="Mrs">Mrs</option>
+                                        <option value="Miss">Miss</option>
+                                        <option value="Ms">Ms</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="fname">First Name</label>
+                                <td><input type="text" id="fname" pattern="[A-Za-z]*"
+                                           title="Only letters..."
+                                           th:field="*{firstName}"/></td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="lname">Last Name</label></td>
+                                <td><input type="text" id="lname" pattern="[A-Za-z]*"
+                                           title="Only letters..."
+                                           th:field="*{lastName}"/></td>
+                            </tr>
+                            <tr>
+                                <td><label for="email">Email</label></td>
+                                <td><input type="email" id="email"
+                                           th:field="*{email}"/></td>
+                            </tr>
+                            <tr>
+                                <td><label for="pword">Password</label></td>
+                                <td><input type="password" id="pword" minlength="6" th:field="*{password}"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><input type="submit" value="Register"/></td>
+                            </tr>
+
+
+                        </table>
+                    </fieldset>
+                </form>
+            </div>
+
+
+        </div>
+</main>
+</body>
+</html>

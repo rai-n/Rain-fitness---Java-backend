@@ -1,0 +1,967 @@
+/*
+for all such elements, border-box style margins are specified
+*/
+* {
+    box-sizing: border-box;
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+}
+/*
+set the background colour to black and full size
+*/
+body {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+/*
+full sized document
+*/
+html {
+    width: 100%;
+    height: 100%;
+}
+/*
+setting a special identifier for white content
+*/
+#p-wh{
+    color: white;
+}
+/*
+setting a special identifier for red content
+*/
+#food-bg{
+    background-color: red;
+}
+/*
+setting a special identifier for white content
+*/
+#register-bg{
+    background-color: white;
+}
+/*
+setting a special identifier for yellow content
+*/
+#food-bg2{
+    background-color: yellow;
+}
+/*
+setting a special identifier for white bg and black text
+*/
+#dashboard{
+    background-color: white;
+    text-decoration-color:black;
+}
+/*
+setting a list alignment to the left
+*/
+li{
+    text-align: -webkit-left;
+}
+/*
+creating a class to contain data for main section using grid
+*/
+.container-load {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+/*
+creating a class to contain the main section of the website
+with white bg and little padding on top
+*/
+.main-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #dbe9d8;
+
+}
+/*
+creating a class to contain section 2 of the website
+*/
+.sec2 {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #c2d4d8;
+}
+/*
+creating a class to contain section 2 of website
+*/
+.sec3 {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #f2efe8;
+}
+/*
+creating a class to contain data which will be fetched with ajax
+*/
+.tba {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #b0aac2;
+}
+/*
+grid column of 12 is assigned for the total length of column for register page
+*/
+.inlist {
+    grid-column: 12;
+}
+/*
+in the case that there is an invalid data entered, colour is changed of the border
+to alert the user that data entered is incorrect
+*/
+input:invalid {
+    border: 2px solid red;
+}
+/*
+used to alert the user that data entered is correct
+*/
+input:valid {
+    border: 2px solid green;
+}
+/*
+used to style input box for the registration form
+*/
+input[type=email]{
+    -webkit-appearance: none;
+
+    width: 100%;
+    border: 1px solid #333;
+    margin: 0;
+
+    font-family: inherit;
+    font-size: 0.9rem;
+
+}
+
+/* This is our style for the invalid fields */
+form input:invalid{
+    border-color: #900;
+    background-color: #FDD;
+}
+
+form input:focus:invalid {
+    outline: none;
+}
+
+/* This is the style of our error messages */
+.error {
+    width  : 30%;
+    padding: 0;
+
+    font-size: 0.9rem;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+
+}
+/*
+creating a class to display error messages
+*/
+.error.active {
+    padding: 0.3em;
+}
+
+/*
+fetching a text font format
+*/
+@font-face {
+    font-family: "Digital";
+    src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot");
+    src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff") format("woff"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7") format("svg");
+}
+/*
+making the body for text centered for the main register page to display content
+*/
+body {
+    background: #1E555C;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Righteous';}
+/*
+flexbox container to align items
+*/
+#container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+anchor tag to change the colour of the text for special fields
+*/
+a {
+    text-decoration: #3a3a3a;
+    color: white;
+    line-height: 26px;
+}
+
+/*
+setting max height for body and document
+*/
+body, html {
+    height: 100%;
+}
+/*
+creating a class to contain
+*/
+#parallax1 {
+    background-image: url("../images/fitness/bg.jpg");
+    height: 15%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*
+creating a class to contain parallax effect
+*/
+#parallax2 {
+
+    background-image: url("../images/fitness/bg2.jpg");
+
+
+    height: 10%;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*
+creating a class to contain parallax effect
+*/
+#parallax3 {
+
+    background-image: url("../images/fitness/3.jpg");
+
+    height: 10%;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*
+changing body tag to have max width
+*/
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+/*
+changing body tag to support font type
+*/
+body {
+    font-family: "Helvetica Neue",sans-serif;
+    font-weight: lighter;
+}
+/*
+changing header tag to support changing values for width and height
+*/
+header {
+    width: 100%;
+    height: 100vh;
+    background: url(hero.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+/*
+container to display text in using margins with justify align text
+*/
+.content {
+    width: 94%;
+    margin: 4em auto;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+/*
+class container for a logo
+*/
+.logo {
+    line-height: 60px;
+    position: fixed;
+    float: left;
+    margin: 16px 46px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+/*
+class container for navigation
+*/
+
+nav {
+    position: fixed;
+    width: 100%;
+    line-height: 60px;
+}
+/*
+class container for un-ordered list
+*/
+nav ul {
+    line-height: 60px;
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    padding-right: 40px;
+    transition: 1s;
+}
+
+nav.black ul {
+    background: #000;
+}
+/*
+assigning inline flex for ul and li elements inside nav
+*/
+nav ul li {
+    display: inline-flex;
+
+    padding: 20px 20px;;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+/*
+menu-icon container to display information
+*/
+.menu-icon {
+    display: none;
+    line-height: 60px;
+    width: 100%;
+    background: #000;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+}
+/*
+Responsive media for nav solution,
+changing sizes depending on width size
+*/
+@media(max-width: 786px) {
+
+    .logo {
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+    }
+
+    nav ul {
+        max-height: 0px;
+        background: #000;
+    }
+
+    nav.black ul {
+        background: #000;
+    }
+
+    .showing {
+        max-height: 34em;
+    }
+
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+}
+
+
+
+/* =================================
+  Base Styles
+==================================== */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Lato', sans-serif;
+    color: #3a3a3a;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+}
+/*
+container for hosting text in diet
+*/
+.container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1170px;
+}
+/*
+button listings
+*/
+.button {
+    background: none;
+    height: 50px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    -webkit-transition: background 0.4s;
+    -moz-transition: background 0.4s;
+    transition: background 0.4s;
+}
+
+/* ---- Header ---- */
+#main-header {
+    background: #fff;
+    padding: 0.85em 0;
+}
+#main-header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#main-header .logo, #main-header nav a {
+    padding: 10px;
+}
+@media (min-width: 500px) {
+    #main-header .logo, #main-header nav a {
+        padding: 10px 15px;
+    }
+}
+#main-header .logo {
+    font-size: 1.35em;
+    color: #28415E;
+}
+#main-header nav a {
+    font-size: 0.65em;
+    text-transform: uppercase;
+    color: #517fb5;
+}
+@media (min-width: 500px) {
+    #main-header nav a {
+        font-size: 0.95em;
+    }
+}
+
+/*
+Flexbox styled containers and stylers used to style content page for packages
+*/
+#textboxw {
+    color: #494f4f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4em 0;
+}
+#textboxl {
+    color: limegreen;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4em 0;
+}
+
+#textbox {
+    background: #EEEBE4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4em 0;
+}
+
+#textbox .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #28415E;
+}
+#textbox .cta .splash {
+    display: none;
+}
+@media (min-width: 500px) {
+    #textbox .cta .splash {
+        display: block;
+        width: 200px;
+    }
+}
+#textbox .cta img {
+    margin-bottom: 1em;
+}
+#textbox .cta h1, #textbox .cta p, #textbox .cta .button {
+    text-align: center;
+}
+#textbox .cta h1 {
+    margin: 0;
+}
+#textbox .cta p {
+    margin-bottom: 1.5em;
+}
+#textbox .cta .button {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    box-shadow: inset 0 0 0 2px #B79D55;
+    color: #28415E;
+}
+#textbox .cta .button:hover, #textbox .cta .button:focus {
+    background: #B79D55;
+    color: #fff;
+}
+
+img{
+    border-bottom: #3a3a3a;
+}
+#packages {
+    padding-bottom: -5em;
+    padding-top: 1em;
+}
+#packages h2 {
+    margin: 0;
+    text-align: center;
+}
+#packages form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 4em 0;
+    max-width: 600px;
+}
+@media (min-width: 500px) {
+    #packages form {
+        flex-direction: row;
+    }
+}
+#packages form input, #packages form button {
+    margin: 0 1em;
+    padding: 10px;
+    height: 50px;
+    outline: 0;
+}
+#packages form input {
+    background-color: #fff;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    color: #494f4f;
+    -webkit-transition: border-color 0.4s;
+    -moz-transition: border-color 0.4s;
+    transition: border-color 0.4s;
+}
+#packages form input:focus {
+    border-color: #879090;
+}
+@media (min-width: 500px) {
+    #packages form input {
+        flex: 3;
+        margin-bottom: 0;
+    }
+}
+#packages form .button {
+    border: 0;
+    box-shadow: inset 0 0 0 2px #879090;
+    color: #494f4f;
+}
+#packages form .button:hover, #packages form .button:focus {
+    background: #879090;
+    color: #fff;
+}
+@media (min-width: 500px) {
+    #packages form .button {
+        flex: 100px;
+    }
+}
+#packages ul, #packages ul li, #packages ul li div {
+    display: flex;
+}
+#packages ul {
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/*
+Change colour on hover
+*/
+#packages ul li {
+    background: rgba(0, 0, 0, 0.35);
+    position: relative;
+    flex-direction: column;
+    cursor: pointer;
+    -webkit-transition: background 0.4s;
+    -moz-transition: background 0.4s;
+    transition: background 0.4s;
+}
+#packages ul li:hover {
+    background: rgba(0, 0, 0, 0);
+}
+@media (min-width: 500px) {
+    #packages ul li {
+        flex: 50%;
+    }
+}
+@media (min-width: 800px) {
+    #packages ul li {
+        flex: 25%;
+    }
+}
+#packages ul li div {
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+}
+#packages ul li div h3, #packages ul li div h4 {
+    margin: 0;
+}
+#packages ul li div h3 {
+    margin-bottom: 0.35em;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+#packages ul li div h4 {
+    font-weight: 50;
+    letter-spacing: 1px;
+}
+#packages ul li img {
+    position: relative;
+    z-index: -1;
+}
+
+
+/* ---- Footer ---- */
+#main-footer {
+    background: #d9e4ea;
+    flex: 1;
+    padding: 2em 0;
+    text-align: center;
+}
+
+
+#container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media screen and (max-width: 500px) {
+    #container {
+        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+        -moz-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        -o-transform: scale(0.8);
+    }
+}
+
+/*4 columns */
+/*  SECTIONS  */
+.section {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+    display: block;
+    float:left;
+    margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF FOUR  */
+.span_4_of_4 {
+    width: 100%;
+}
+.span_3_of_4 {
+    width: 74.6%;
+}
+.span_2_of_4 {
+    width: 49.2%;
+}
+.span_1_of_4 {
+    width: 23.8%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+    .col {  margin: 1% 0 1% 0%; }
+    .span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
+}
+
+
+/*2 columns*/
+/*  SECTIONS  */
+.section {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+    display: block;
+    float:left;
+    margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF TWO  */
+.span_2_of_2 {
+    width: 100%;
+}
+.span_1_of_2 {
+    width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+    .col {
+        margin: 1% 0 1% 0%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .span_2_of_2, .span_1_of_2 { width: 100%; }
+}
+
+/*
+Card container used to display individual block of items in a row
+*/
+
+.card-profile {
+    position: relative;
+    z-index: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    border: 0;
+    border-radius: 0;
+    background: #fefefe;
+    box-shadow: none;
+    overflow: hidden;
+    color: #0a0a0a;
+}
+
+.card-profile > :last-child {
+    margin-bottom: 0;
+}
+
+.card-profile:hover .card-user-profile-img {
+    opacity: 1;
+}
+
+.card-content {
+    position: relative;
+}
+
+.card-content::before {
+    position: absolute;
+    content: '';
+    top: -3.4375rem;
+    left: -1.875rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3.4375rem 0 0 31.25rem;
+    z-index: 0;
+    border-color: transparent transparent transparent #fefefe;
+}
+
+.card-action {
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    padding: 1rem;
+    background: #e6e6e6;
+    background: #fefefe;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.card-action > :last-child {
+    margin-bottom: 0;
+}
+
+.card-user-profile-img {
+    max-width: 100%;
+    opacity: 0.85;
+    transition: all 0.25s ease;
+}
+
+.card-picture {
+    position: absolute;
+    bottom: 100%;
+    left: 1rem;
+    z-index: 2;
+    max-width: 5.625rem;
+}
+
+.card-picture img {
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+}
+
+.card-user-profile-name {
+    margin-bottom: 0;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.card-user-profile-button {
+    margin-bottom: 0;
+    -webkit-flex: 1 0 0;
+    -ms-flex: 1 0 0px;
+    flex: 1 0 0;
+}
+
+.card-user-profile-button + .card-user-profile-button {
+    margin-left: 1rem;
+}
+
+.card-user-profile-info {
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+/*Colour box*/
+
+#colourbox {
+    background: #EEEBE4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em 0;
+    color: #28415E;
+}
+
+#colourbox .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #28415E;
+}
+#colourbox .cta .splash {
+    display: none;
+}
+@media (min-width: 500px) {
+    #colourbox .cta .splash {
+        display: block;
+        width: 200px;
+    }
+}
+#colourbox .cta img {
+    margin-bottom: 1em;
+}
+#colourbox .cta h1, #colourbox .cta p, #colourbox .cta .button {
+    text-align: center;
+}
+#colourbox .cta h1 {
+    margin: 0;
+}
+#colourbox .cta p {
+    margin-bottom: 1.5em;
+}
+#colourbox .cta .button {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    box-shadow: inset 0 0 0 2px #B79D55;
+    color: #28415E;
+}
+#colourbox .cta .button:hover, #colourbox .cta .button:focus {
+    background: #B79D55;
+    color: #fff;
+}
+
+/*
+styling of keywords for fitness
+*/
+
+label {
+    display: block;
+    box-shadow: 0.1em 0.1em 0.2em #888;
+    margin: 1em;
+    border-radius: 1ex;
+    padding: 0.5ex 0.5em;
+}
+input[type=number] {
+    text-align: right;
+    border: none;
+    color: black;
+}
+input {
+    float: right;
+    color: black;
+
+}
+span {
+    font-weight: bold;
+}
+

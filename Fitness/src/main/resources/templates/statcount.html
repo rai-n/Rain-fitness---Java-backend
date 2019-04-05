@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fitness</title>
+    <script src="../static/js/jquery.js" th:src="@{/js/jquery.js}"></script>
+    <script src="../static/js/jquery.easing.min.js" th:src="@{/js/jquery.easing.min.js}"></script>
+    <script type="text/javascript" src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <title>Statistics track</title>
+</head>
+<body>
+<header>
+    <nav class="nav-collapse">
+        <ul>
+            <li><a href="register.html" th:href="@{/register}">HOME</a></li>
+            <li><a href="#" th:href="@{/profile}">Back To Profile</a></li>
+            <li><a href="add.html" th:href="@{/add}">Append Workout</a></li>
+            <li><a href="load.html" th:href="@{/load}">View Session</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="section group">
+    <div class="col span_1_of_2">
+        <div class="card-profile">
+            <img class="card-user-profile-img" src="/static/images/fitness/dumbbell.jpg"
+                 th:src="@{/images/fitness/dumbbell.jpg}" alt="Food"/>
+            <div class="card-content card-section">
+                <p class="card-user-profile-name">Great work!</p>
+                <p class="card-user-profile-status">Keep grinding! You will reach your goal!</p>
+                <p class="card-user-profile-info">
+                    For the <span th:text="${exercise.workout.toLowerCase()}">#</span> workout, you have spent <span th:text="${exercise.mins}">#</span>
+                    minutes for a total of <span th:text="${exercise.sets}*${exercise.reps}">#</span> repetitions.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col span_1_of_2">
+        <div class="card-profile">
+            <h2>Done with your session?</h2>
+            <h3>Take a break!</h3>
+        <section class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ppOjjTh8uzU" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </section>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

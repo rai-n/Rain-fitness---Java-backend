@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fitness - Learn... </title>
+    <script src="../static/js/jquery.js" th:src="@{/js/jquery.js}"></script>
+    <script src="../static/js/jquery.easing.min.js" th:src="@{/js/jquery.easing.min.js}"></script>
+    <script type="text/javascript" src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <title>Health and fitness</title>
+</head>
+<body>
+<header>
+    <nav class="nav-collapse">
+        <ul>
+            <li><a href="#test" th:href="@{/register}">Home</a></li>
+            <li><a href="#" th:href="@{/diet}">Diet</a></li>
+            <li><a href="#" th:href="@{/profile}">Profile</a></li>
+        </ul>
+    </nav>
+    <img src ="../static/images/fitness/bg.jpg" th:src="@{/images/fitness/bg.jpg}">
+</header>
+<main>
+    <h1>VIDEO HUB</h1>
+    <div id = 'test'></div>
+    <div class="section group">
+        <div class="col span_1_of_2">
+            <section class="images">
+            <img src="../static/images/workouts/bicep.jpg" th:src="@{/images/workouts/bicep.jpg}" alt="Bicep"/>
+            </section>
+        </div>
+        <div class="col span_1_of_2">
+            <section class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/gozU3CUIizs" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </section>
+        </div>
+    </div>
+
+    <div class="section group">
+        <div class="col span_1_of_2">
+            <section class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/89e518dl4I8" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </section>
+
+        </div>
+        <div class="col span_1_of_2">
+            <section class="images">
+                <img src="../static/images/workouts/chest.jpg" th:src="@{/images/workouts/chest.jpg}" alt="Chest"/>
+            </section>
+        </div>
+    </div>
+
+    <div class="section group">
+        <div class="col span_1_of_2">
+            <section class="images">
+                <img src="../static/images/workouts/chest.jpg" th:src="@{/images/workouts/legs.jpg}" alt="Chest"/>
+            </section>
+        </div>
+        <div class="col span_1_of_2">
+            <section class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RjexvOAsVtI" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+
+
+
+    <footer>
+
+    </footer>
+</main>
+</body>
+</html>

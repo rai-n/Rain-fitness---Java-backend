@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/profile.css" th:href="@{/css/profile.css}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fitness</title>
+    <script src="../static/js/jquery.js" th:src="@{/js/jquery.js}"></script>
+    <script src="../static/js/jquery.easing.min.js" th:src="@{/js/jquery.easing.min.js}"></script>
+    <script type="text/javascript" src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <title>Enrollment to course</title>
+</head>
+<body>
+<main>
+<header>
+    <nav class="nav-collapse">
+        <ul>
+            <ul>
+                <li><a href="#test" th:href="@{/register}">Home</a></li>
+                <li><a href="#" th:href="@{/fitness}">Fitness</a></li>
+                <li><a href="#" th:href="@{/profile}">Profile</a></li>
+            </ul>
+        </ul>
+    </nav>
+</header>
+<article>
+    <h1>TIPS!</h1>
+    <p>For any of the packages, you should spend about an hour, with varying intensity and workouts.</p>
+
+</article>
+
+
+<section>
+    <form th:action="@{enroll}" method="post" th:object="${enroll}">
+        <fieldset>
+            <h2>Enroll to package</h2>
+            <table>
+                <tr>
+                    <td><label for="user">Enroll to:</label></td>
+                    <td><select id="user" required="required" th:field="*{user}">
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Expert">Expert</option>
+                    </select></td>
+                    <td><input type="submit" value="Book"/></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    <img src="../static/images/fitness/enroll.png" th:src="@{/images/fitness/enroll.png}" alt = 'Enroll'>
+</section>
+</main>
+<footer id='footer'>
+Enroll to a package today!
+</footer>
+
+</body>
+</html>

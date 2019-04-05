@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../static/css/profile.css" th:href="@{/css/profile.css}"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fitness - Learn... </title>
+    <script src="../static/js/jquery.js" th:src="@{/js/jquery.js}"></script>
+    <script src="../static/js/jquery.easing.min.js" th:src="@{/js/jquery.easing.min.js}"></script>
+    <script type="text/javascript" src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <title>Workout</title>
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="register.html" th:href="@{/register}">HOME</a></li>
+            <li><a href="#" th:href="@{/profile}">Back To Profile</a></li>
+            <li><a href="load.html" th:href="@{/load}">Check workout</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+<main>
+    <article>
+        <h1>Add your workouts here</h1>
+        <p>For each of your workouts sessions, write down what workout your did,
+        how many reps/ sets and how long you did it for.</p>
+        <form action="/add" th:action="@{/add}" th:object="${exercises}" method="post" >
+            <label for="workout">Workout:</label><input id="workout" th:field="*{workout}" type="text" /><br />
+            <label for="mins">Minutes:</label><input id="mins" th:field="*{mins}" type="number" /><br />
+            <label for="sets">Sets:</label><input id="sets" th:field="*{sets}" type="number" /><br />
+            <label for="reps">Reps:</label><input id="reps" th:field="*{reps}" type="number" /><br />
+            <input type="submit">
+        </form>
+    </article>
+
+    <section>
+        <img src="../static/images/workouts/timer.png" th:src="@{/images/workouts/timer.png}" alt = 'Timer'>
+    </section>
+    <footer id='footer'>
+        Track your fitness sessions by putting your exercise values.
+    </footer>
+</main>
+</body>
+</html>
+
+
+
+
+
+

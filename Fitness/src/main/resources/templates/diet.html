@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fitness - Learn... </title>
+    <script src="../static/js/jquery.js" th:src="@{/js/jquery.js}"></script>
+    <script src="../static/js/jquery.easing.min.js" th:src="@{/js/jquery.easing.min.js}"></script>
+    <script type="text/javascript" src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <title>Health and fitness</title>
+
+</head>
+<body>
+<header>
+    <nav class="nav-collapse">
+        <ul>
+            <li><a href="#test" th:href="@{/register}">Home</a></li>
+            <li><a href="#" th:href="@{/fitness}">Fitness</a></li>
+            <li><a href="#" th:href="@{/profile}">Profile</a></li>
+        </ul>
+    </nav>
+    <img src="../static/images/fitness/bg2.jpg" th:src="@{/images/fitness/bg2.jpg}">
+</header>
+<main>
+    <div class="card-profile">
+
+    <div class="section group">
+        <div class="col span_1_of_2">
+            <h1>Learn about calorie counting</h1>
+            <p>Calories count when it comes to weight loss, gain, or maintenance.
+                If you eat more calories than you burn, then you gain weight.
+                For those of us struggling to lose weight or maintain our weight loss,
+                it is critical that we have an understanding of how to manage our calories so that we meet our
+                short-term
+                and long-term goals. Tracking diet and exercise also helps us become more aware of:
+            <ul>
+                <li>What we eat</li>
+                <li>When we eat</li>
+                <li>Why we eat</li>
+                <li>Portion size</li>
+                <li>Nutrients</li>
+            </ul>
+            </p>
+        </div>
+        <div class="col span_1_of_2">
+            <h2>What We Eat</h2>
+            <p>
+                Logging food and beverage intake helps us think about the type of food we eat and how it is prepared. The fact
+                that you have to choose one particular food item over another encourages you to become more aware of the calorie
+                differences between foods prepared in different ways. For example, 3 oz of roasted chicken breast with skin has
+                28 more calories, 4 g more fat, and 1 g less protein than roasted skinless chicken breast. The small amount of
+                extra calories might not seem like a big difference, but over time, it adds up. It is similar to what happens
+                when you don't fix a leaky faucet. That slow drip over time means a higher water bill.</p>
+        </div>
+    </div>
+
+    <div class="section group">
+        <div class="col span_1_of_2">
+            <h2>When We Eat</h2>
+            <p>
+                The best time to log is when you actually consume the food or drink so that you do not have to rely on memory.
+                Look at your time entries in your food log. Do you see any timing patterns that seem to help or hinder you from
+                meeting your weight goal? Here are some red flags for consuming too many calories:</p>
+            <ol>
+                <li>Skip breakfast and/or lunch, eat a large dinner, and then snack late into the night.</li>
+                <li> Time gap of more than 5-6 hours between meals. Your next meal is likely to be higher in calories with a
+                    long delay between meals.
+                </li>
+                <li> Constant grazing - your time-stamps show that you eat or drink calories all day long. What’s going on?
+                    Eating enough at meals or are you skipping meals?
+                </li>
+            </ol>
+        </div>
+        <div class="col span_1_of_2">
+            <h2>Why We Eat</h2>
+            <p>
+                In addition to keeping an accurate food log, consider keeping a journal about events that occurred during the day.
+                In MyNetDiary, you can use the Notes section on your Dashboard for this purpose. This will help you discover
+                if there is a relationship between what happens in your day and your eating habits. In addition,
+                look at days whe re your exercise is lower or higher than typical for you. Does your food intake seem to be different
+                on those days? Ironically, many of us tend to eat more calories on the days when we have very little activity.
+            </p>
+        </div>
+    </div>
+
+    </div>
+
+
+
+    <div class="section group">
+        <div class="col span_1_of_2">
+            <section class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jwWpTAXu-Sg" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </section>
+
+        </div>
+        <div class="col span_1_of_2">
+            <section class="images">
+                <img src="../static/images/fitness/food.jpg" th:src="@{/images/fitness/food.jpg}" alt="Food"/>
+            </section>
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        Learn about diets...
+    </footer>
+</main>
+</body>
+</html>

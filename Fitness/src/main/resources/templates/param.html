@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Table Example</title>
+</head>
+<body>
+
+<a href="index.html" th:href="@{/}">Home</a>
+<a href="add.html" th:href="@{/add}">Add</a>
+<a href="load.html" th:href="@{/load}">Load</a>
+<a href="param.html" th:href="@{/param}">Param</a>
+
+<p th:text="${value}">#</p>
+</body>
+</html>
