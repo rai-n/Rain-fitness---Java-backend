@@ -1,5 +1,7 @@
 # Springboot-webpage
-A health and fitness website created using Springboot framework, H2  and Thymeleaf for data persistence.
+A health and fitness website, where you can measure learn about fitness and diet and also calculate your BMI.
 
-Use of semantic html for content markup, css for styling and javascript for functionality. 
-Additional use of JS library Bootstrap for navigation bar
+Created using Springboot framework, H2 and Thymeleaf for data persistence.
+Uses semantic HTML for content markup, CC for styling and Javascript for functionality. \\
+
+Also uses Bootstrap navbar. 
